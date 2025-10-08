@@ -1,0 +1,20 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compilar e Rodar C++",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-c",
+                "clang++ -std=c++17 -Wall '${file}' -o '${fileDirname}/${fileBasenameNoExtension}' && '${fileDirname}/${fileBasenameNoExtension}'"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Compila e executa código C++ automaticamente"
+        }
+    ]
+}
