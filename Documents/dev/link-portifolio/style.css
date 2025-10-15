@@ -1,0 +1,102 @@
+:root{
+    --marrom-escuro:#493628;
+    --marrom-claro:#D6C0B3;
+    --marrom-médio: #AB886D;
+   --navy:#44444E;
+    --font-text: "Zalando-Sans",sans-serif;
+
+}
+body{
+background-color: var(--marrom-escuro);
+font-family: var(--font-text);
+}
+
+.card__container{
+    display: flex;
+    flex-direction: column;
+        position: relative; /* Define o ponto de referência */
+        min-height: 100vh; /* Garante altura da tela */ 
+}
+
+.card__descricao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 50%; /* Move 50% para baixo */
+    left: 50%; /* Move 50% para a direita */
+    transform: translate(-50%, -50%); /* Ajusta para centralizar */
+    gap: 0.5em;
+    background-color: var(--marrom-médio);
+    border-radius: 0.5em;
+   padding: 2em;
+   box-shadow: 0 4px 8px rgba(1, 1, 1, 0);
+   border-radius: 10px
+    
+}
+.card__conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0.5em;
+}
+
+
+.card__foto{
+    width: 5em;
+     height: 5em;
+    border-radius: 30em;
+    padding-bottom: 1em;
+}
+
+.card__texto,.card__titulo,.card__cargo{
+    font-family:var(--font-text) ;
+}
+
+.card__titulo{
+    font-size: 1.5em;
+    color:var(--navy);
+    margin-bottom: 0.1em;
+}
+.card__texto{
+   color:var(--marrom-escuro);
+   padding:0.5em 0 2em 0 ;
+}
+
+.card__cargo{
+    color: var(--marrom-escuro);
+    padding-bottom: 1em;
+}
+
+.card__lista{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.card__lista-item{
+    display: flex;
+    padding: 0.5em 4em;
+   background-color: var(--marrom-claro);
+   border-radius: 0.5em;
+   margin-bottom: 1em;
+   
+}
+.card__lista-link{
+    text-decoration: none;
+    color: var(--marrom-escuro);
+    font-family: var(--font-text);
+}
+.card__lista-item:hover{
+    background-color: var(--marrom-escuro);
+    
+}
+.card__lista-item:hover .card__lista-link {
+    color: var(--marrom-claro);
+    transform: scale(1.05);
+  }
+
+.card__lista-item,
+.card__lista-link {
+  transition: all 0.3s ease;
+}
